@@ -16,6 +16,7 @@ getUserPosts = function () {
     type: "GET",
     url: PostsUrl + "?userId=" + userId,
     dataType: "json",
+    async: false,
     success: function (data) {
       $.each(data, function (i) {
         self.post = data[i];

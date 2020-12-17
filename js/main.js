@@ -3,7 +3,7 @@ var getUserUrl = "https://jsonplaceholder.typicode.com/users";
 $(document).ready(function () {
   getUserInfo();
   $(".userButton").click(function () {
-    localStorage.setItem("userId", this.id); //save clicked user id
+    localStorage.setItem("userId", this.id);
     window.location.href = "userdetail.html";
   });
 });
@@ -14,6 +14,7 @@ getUserInfo = function () {
     type: "GET",
     url: getUserUrl,
     dataType: "json",
+    async: false,
     success: function (data) {
       $.each(data, function (i) {
         self.data = data[i];
