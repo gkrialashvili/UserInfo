@@ -18,7 +18,7 @@ getUserInfo = function () {
       $.each(data, function (i) {
         self.data = data[i];
         $("#user-info-cont").append(
-          "<button class= 'userButton' id ='" +
+          "<button class= 'userButton action-button shadow animate blue' id ='" +
             self.data.id +
             "' >" +
             self.data.name +

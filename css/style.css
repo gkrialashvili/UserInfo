@@ -51,6 +51,7 @@ body {
   justify-content: flex-start;
   margin-top: 50px;
   flex-wrap: wrap;
+  margin-left: 20px;
 }
 .user-information {
   margin: 60px 0;
@@ -108,6 +109,35 @@ h3 {
   width: max-content;
   font-size: 20px;
   text-transform: uppercase;
+}
+
+.animate {
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.action-button {
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.blue {
+  background-color: #3090c7;
+  border-bottom: 5px solid #3090c7;
+  text-shadow: 0px -2px #3090c7;
+}
+
+.action-button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  border-bottom: 1px solid;
 }
 
 @media screen and (max-width: 900px) {
