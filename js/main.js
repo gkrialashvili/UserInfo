@@ -14,7 +14,6 @@ getUserInfo = function () {
     type: "GET",
     url: getUserUrl,
     dataType: "json",
-    async: false,
     success: function (data) {
       $.each(data, function (i) {
         self.data = data[i];

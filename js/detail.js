@@ -9,7 +9,6 @@ $(document).ready(function () {
     type: "GET",
     url: getUserUrl + userId,
     dataType: "json",
-    async: false,
     success: function (response) {
       address = response.address;
       company = response.company;
