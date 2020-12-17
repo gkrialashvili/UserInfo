@@ -1,12 +1,13 @@
 var userId;
 var address;
 var company;
+var getUserUrl = "https://jsonplaceholder.typicode.com/users/";
 $(document).ready(function () {
   userId = localStorage.getItem("userId");
   // get user information with saved userId
   $.ajax({
     type: "GET",
-    url: "https://jsonplaceholder.typicode.com/users/" + userId,
+    url: getUserUrl + userId,
     dataType: "json",
     async: false,
     success: function (response) {

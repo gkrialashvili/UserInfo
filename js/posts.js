@@ -1,4 +1,5 @@
 var userId;
+var PostsUrl = "https://jsonplaceholder.typicode.com/posts";
 $(document).ready(function () {
   userId = localStorage.getItem("userId");
   getUserPosts();
@@ -13,17 +14,12 @@ var arr = [];
 getUserPosts = function () {
   $.ajax({
     type: "GET",
-    url: "https://jsonplaceholder.typicode.com/posts",
+    url: PostsUrl + "?userId=" + userId,
     dataType: "json",
     async: false,
     success: function (data) {
-      var posts = data.filter(function (posts) {
-        //filter which user post to show with user id
-        return posts.userId == userId;
-      });
-
-      $.each(posts, function (i) {
-        self.post = posts[i];
+      $.each(data, function (i) {
+        self.post = data[i];
         $(".userPostContainer").append(
           "<div class='d-flex flex-column user-post-container " +
             self.post.userId +

@@ -1,3 +1,4 @@
+var getUserUrl = "https://jsonplaceholder.typicode.com/users";
 //get users information data on ducument ready
 $(document).ready(function () {
   getUserInfo();
@@ -11,7 +12,7 @@ $(document).ready(function () {
 getUserInfo = function () {
   $.ajax({
     type: "GET",
-    url: "https://jsonplaceholder.typicode.com/users",
+    url: getUserUrl,
     dataType: "json",
     async: false,
     success: function (data) {
