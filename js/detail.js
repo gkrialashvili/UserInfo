@@ -27,9 +27,11 @@ $(document).ready(function () {
     },
   });
   getUserPosts();
+  //go to selected user posts page
   $(".postButton").click(function () {
     window.location.href = "posts.html";
   });
+  //go back to home page
   $(".backButton").click(function () {
     window.location.href = "index.html";
   });

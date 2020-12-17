@@ -2,6 +2,7 @@ var userId;
 $(document).ready(function () {
   userId = localStorage.getItem("userId");
   getUserPosts();
+  //go back to details page
   $(".backToDetails").click(function () {
     window.location.href = "userdetail.html";
   });
